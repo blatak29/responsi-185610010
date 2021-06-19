@@ -1,0 +1,9 @@
+FROM centos:latest
+MAINTAINER Putra
+
+COPY responsi-185610010/index.html /var/www/html/
+
+RUN apt-get install httpd 
+EXPOSE 80
+ 
+CMD ["/usr/sbin/httpd -D FOREGROUND"]
